@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if grep -qF -i "$1" ~/scripts/ip_list.txt;then
+   echo "Found it"
+   echo "Establishing connection"
+	   ssh osr@$1
+   echo "connection interrupted or closed"
+else
+   echo "Sorry this string is not in file"
+fi
